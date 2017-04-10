@@ -22,6 +22,9 @@
     <sprite>sprites\spr_sword</sprite>
     <sprite>sprites\spr_sword_hitbox</sprite>
     <sprite>sprites\spr_knight</sprite>
+    <sprite>sprites\spr_treetrunk</sprite>
+    <sprite>sprites\spr_treeleaves</sprite>
+    <sprite>sprites\spr_pond</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -60,10 +63,14 @@
     <object>objects\obj_sword</object>
     <object>objects\obj_player_knight</object>
     <object>objects\obj_sword_hitbox</object>
+    <object>objects\obj_treetrunk</object>
+    <object>objects\obj_treeLeaves</object>
+    <object>objects\obj_pond</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_forest</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
