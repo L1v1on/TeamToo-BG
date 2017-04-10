@@ -25,6 +25,7 @@
     <sprite>sprites\spr_treetrunk</sprite>
     <sprite>sprites\spr_treeleaves</sprite>
     <sprite>sprites\spr_pond</sprite>
+    <sprite>sprites\spr_chain</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -62,6 +63,9 @@
     <object>objects\obj_immolation_P2</object>
     <object>objects\obj_sword</object>
     <object>objects\obj_player_knight</object>
+    <object>objects\obj_chain_creator</object>
+    <object>objects\obj_grapple_location</object>
+    <object>objects\obj_chain</object>
     <object>objects\obj_sword_hitbox</object>
     <object>objects\obj_treetrunk</object>
     <object>objects\obj_treeLeaves</object>
