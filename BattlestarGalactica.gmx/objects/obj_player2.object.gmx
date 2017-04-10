@@ -197,7 +197,7 @@ if(castTrapRune &amp;&amp; inProcess ==0){
 }
 //Immolation
     if(castImmolation &amp;&amp; inProcess2==0){
-        instance_create(x,y,obj_immolation_P1);
+        instance_create(x,y,obj_immolation_P2);
         inProcess2 = 1;
     }
     }//End of player1 checkers
