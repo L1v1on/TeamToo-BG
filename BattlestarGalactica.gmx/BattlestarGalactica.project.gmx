@@ -23,12 +23,15 @@
     <sprite>sprites\spr_sword_hitbox</sprite>
     <sprite>sprites\spr_knight</sprite>
     <sprite>sprites\spr_treetrunk</sprite>
+    <sprite>sprites\spr_snake</sprite>
+    <sprite>sprites\spr_desert_wall</sprite>
     <sprite>sprites\spr_treeleaves</sprite>
     <sprite>sprites\spr_pond</sprite>
     <sprite>sprites\spr_chain</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
+    <background>background\bg_sand</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -70,11 +73,15 @@
     <object>objects\obj_treetrunk</object>
     <object>objects\obj_treeLeaves</object>
     <object>objects\obj_pond</object>
+    <object>objects\obj_desert_wall</object>
+    <object>objects\obj_snake</object>
+    <object>objects\obj_snake_spawner</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_forest</room>
+    <room>rooms\rm_desert</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
