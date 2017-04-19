@@ -28,6 +28,9 @@
     <sprite>sprites\spr_treeleaves</sprite>
     <sprite>sprites\spr_pond</sprite>
     <sprite>sprites\spr_chain</sprite>
+    <sprite>sprites\spr_slam</sprite>
+    <sprite>sprites\spr_slam_active</sprite>
+    <sprite>sprites\spr_slam_aimer</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -76,6 +79,8 @@
     <object>objects\obj_desert_wall</object>
     <object>objects\obj_snake</object>
     <object>objects\obj_snake_spawner</object>
+    <object>objects\obj_slam_p1</object>
+    <object>objects\obj_slam_active_p1</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>

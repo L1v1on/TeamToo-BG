@@ -68,9 +68,18 @@
             <string>with(obj_player){
     inProcess=0;
 }
+if(global.p2exists==1){
 with(obj_player2){
     P2state = actionsP2.normal;
     sprite_index = spr_player;
+}
+}
+
+if(global.p1knightexists==1){
+with(obj_player_knight){
+    Knightstate = actionsKnight.normal;
+    sprite_index = spr_knight;
+}
 }
 </string>
           </argument>
