@@ -58,6 +58,7 @@
     <object>objects\obj_player1_spell_control_affliction</object>
     <object>objects\obj_player2_spell_control_affliction</object>
     <object>objects\obj_life_controller_P1</object>
+    <object>objects\obj_life_controller_P1knight</object>
     <object>objects\obj_life_controller_P2</object>
     <object>objects\obj_big_fireball_p1</object>
     <object>objects\obj_big_fireball_p2</object>
@@ -84,6 +85,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
+    <room>rooms\rm_sam_room_dont_touch</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_forest</room>
     <room>rooms\rm_desert</room>
