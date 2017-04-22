@@ -26,27 +26,27 @@
           <argument>
             <kind>1</kind>
             <string>
-global.p1knightexists=1;
+global.p2knightexists=1;
 //health variables
 //HealthVariables
-global.hpknightP1=10000;
-global.maxhpknightP1=10000;
+global.hpknightP2=10000;
+global.maxhpknightP2=10000;
 
-enum actionsKnight{
+enum actionsKnight2{
     normal,
     frozen,
     grapple,
     slam
 }
 
-Knightstate = actionsKnight.normal;
+Knightstate2 = actionsKnight2.normal;
 
 //grappleAttack
 inProcess=0;
 //slamAttack
 inProcess2=0;
 //spelltimeraffliction
-p1afflicted=0;
+p2afflicted=0;
 </string>
           </argument>
         </arguments>
@@ -69,7 +69,7 @@ p1afflicted=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>p1afflicted=0;
+            <string>p2afflicted=0;
 </string>
           </argument>
         </arguments>
@@ -143,18 +143,18 @@ p1afflicted=0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(Knightstate){
-case actionsKnight.normal:
-scr_controller_input(0,obj_aimer,6);
+            <string>switch(Knightstate2){
+case actionsKnight2.normal:
+scr_controller_input(1,obj_aimer,6);
 
-castAttack=gamepad_button_check_pressed(0,gp_shoulderrb);
-castChain = gamepad_button_check_pressed(0,gp_shoulderr);
-castSlam = gamepad_button_check_pressed(0,gp_face3);
-castDash = gamepad_button_check_pressed(0,gp_face1);
+castAttack=gamepad_button_check_pressed(1,gp_shoulderrb);
+castChain = gamepad_button_check_pressed(1,gp_shoulderr);
+castSlam = gamepad_button_check_pressed(1,gp_face3);
+castDash = gamepad_button_check_pressed(1,gp_face1);
 
 //AfflictionChecker
-if(p1afflicted==1){
-    global.hpknightP1-=1;
+if(p2afflicted==1){
+    global.hpknightP2-=1;
     sprite_index = spr_player_afflicted;
 }
 //Dash
@@ -166,12 +166,12 @@ if(castAttack){
     sword.direction = direction;
     sword.image_angle = direction;
     
-    hitbox =instance_create(x,y,obj_sword_hitbox);
-    hitbox.direction=obj_aimer.direction;
+    hitbox =instance_create(x,y,obj_sword_hitbox2);
+    hitbox.direction=direction;
     hitbox.image_angle=direction;
 }
 if(castChain &amp;&amp; inProcess==0){
-    chain = instance_create(x,y,obj_chain_creator);
+    chain = instance_create(x,y,obj_chain_creator2);
     chain.direction = direction;
     chain.speed=10;
     chain.image_angle=direction;
@@ -179,20 +179,20 @@ if(castChain &amp;&amp; inProcess==0){
     alarm[0]=100;//code for cooldown
 }
 if(castSlam &amp;&amp; inProcess2==0){
-    instance_create(x,y,obj_slam_p1);
+    instance_create(x,y,obj_slam_p2);
     inProcess2=1;
     
 }
 break;
-case actionsKnight.grapple:
-    move_towards_point(obj_grapple_location.x,obj_grapple_location.y,10);
+case actionsKnight2.grapple:
+    move_towards_point(obj_grapple_location2.x,obj_grapple_location2.y,10);
 break;
-case actionsKnight.frozen:
+case actionsKnight2.frozen:
     sprite_index=spr_player_trapped;
     speed=0;
 break;
-case actionsKnight.slam:
-    move_towards_point(obj_slam_active_p1.x,obj_slam_active_p1.y,40);
+case actionsKnight2.slam:
+    move_towards_point(obj_slam_active_p2.x,obj_slam_active_p2.y,40);
 break;
 }//end switch
 </string>
@@ -200,30 +200,7 @@ break;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sword_hitbox2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>global.hpknightP1-=100;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_slam_active_p1">
+    <event eventtype="4" ename="obj_slam_active_p2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -241,14 +218,37 @@ break;
           <argument>
             <kind>1</kind>
             <string>//no longer frozen
-Knightstate=actionsKnight.normal;
+Knightstate2=actionsKnight2.normal;
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_big_fireball_p2">
+    <event eventtype="4" ename="obj_sword_hitbox">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.hpknightP2-=100;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_big_fireball_p1">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -279,13 +279,13 @@ Knightstate=actionsKnight.normal;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.hpknightP1-=750;
+            <string>global.hpknightP2-=750;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_affliction_p2">
+    <event eventtype="4" ename="obj_affliction_p1">
       <action>
         <libid>1</libid>
         <id>541</id>
@@ -330,7 +330,7 @@ Knightstate=actionsKnight.normal;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>p1afflicted = 1;
+            <string>p2afflicted = 1;
 </string>
           </argument>
         </arguments>
@@ -360,7 +360,7 @@ Knightstate=actionsKnight.normal;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_fireball_P2">
+    <event eventtype="4" ename="obj_fireball_P1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -377,7 +377,7 @@ Knightstate=actionsKnight.normal;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.hpknightP1-=100;
+            <string>global.hpknightP2-=100;
 </string>
           </argument>
         </arguments>

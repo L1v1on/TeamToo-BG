@@ -135,7 +135,7 @@ P1state = actionsP1.normal;
             <string>switch (P1state){
 
 case actionsP1.normal:
-    if(global.p2exists==1){
+    
     scr_player_input();
 
     castFireball = gamepad_button_check_pressed(0,gp_shoulderrb);
@@ -200,7 +200,7 @@ case actionsP1.normal:
         instance_create(x,y,obj_immolation_P1);
         inProcess2 = 1;
     }
-    }//End of player2 checkers
+    
     break;
 
 case actionsP1.frozen:

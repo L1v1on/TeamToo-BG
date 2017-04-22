@@ -59,6 +59,7 @@
     <object>objects\obj_player2_spell_control_affliction</object>
     <object>objects\obj_life_controller_P1</object>
     <object>objects\obj_life_controller_P1knight</object>
+    <object>objects\obj_life_controller_P2knight</object>
     <object>objects\obj_life_controller_P2</object>
     <object>objects\obj_big_fireball_p1</object>
     <object>objects\obj_big_fireball_p2</object>
@@ -70,10 +71,14 @@
     <object>objects\obj_immolation_P2</object>
     <object>objects\obj_sword</object>
     <object>objects\obj_player_knight</object>
+    <object>objects\obj_player_knight2</object>
     <object>objects\obj_chain_creator</object>
+    <object>objects\obj_chain_creator2</object>
     <object>objects\obj_grapple_location</object>
+    <object>objects\obj_grapple_location2</object>
     <object>objects\obj_chain</object>
     <object>objects\obj_sword_hitbox</object>
+    <object>objects\obj_sword_hitbox2</object>
     <object>objects\obj_treetrunk</object>
     <object>objects\obj_treeLeaves</object>
     <object>objects\obj_pond</object>
@@ -81,7 +86,9 @@
     <object>objects\obj_snake</object>
     <object>objects\obj_snake_spawner</object>
     <object>objects\obj_slam_p1</object>
+    <object>objects\obj_slam_p2</object>
     <object>objects\obj_slam_active_p1</object>
+    <object>objects\obj_slam_active_p2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
