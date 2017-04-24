@@ -45,30 +45,12 @@
     <script>scripts\scr_controller_input.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
     <object>objects\obj_aimer</object>
     <object>objects\obj_aimer2</object>
-    <object>objects\obj_fireball_P1</object>
-    <object>objects\obj_fireball_P2</object>
     <object>objects\obj_plasma_shield</object>
     <object>objects\obj_reverse</object>
-    <object>objects\obj_affliction_p1</object>
-    <object>objects\obj_affliction_p2</object>
-    <object>objects\obj_player2</object>
-    <object>objects\obj_player1_spell_control_affliction</object>
-    <object>objects\obj_player2_spell_control_affliction</object>
-    <object>objects\obj_life_controller_P1</object>
     <object>objects\obj_life_controller_P1knight</object>
     <object>objects\obj_life_controller_P2knight</object>
-    <object>objects\obj_life_controller_P2</object>
-    <object>objects\obj_big_fireball_p1</object>
-    <object>objects\obj_big_fireball_p2</object>
-    <object>objects\obj_trap_rune_P1</object>
-    <object>objects\obj_trap_rune_P2</object>
-    <object>objects\obj_trap_rune_active_P1</object>
-    <object>objects\obj_trap_rune_active_P2</object>
-    <object>objects\obj_immolation_P1</object>
-    <object>objects\obj_immolation_P2</object>
     <object>objects\obj_sword</object>
     <object>objects\obj_player_knight</object>
     <object>objects\obj_player_knight2</object>
@@ -89,6 +71,28 @@
     <object>objects\obj_slam_p2</object>
     <object>objects\obj_slam_active_p1</object>
     <object>objects\obj_slam_active_p2</object>
+    <object>objects\obj_trap_rune_active_P1</object>
+    <objects name="Player1Wizard">
+      <object>objects\obj_affliction_p1</object>
+      <object>objects\obj_big_fireball_p1</object>
+      <object>objects\obj_fireball_P1</object>
+      <object>objects\obj_immolation_P1</object>
+      <object>objects\obj_life_controller_P1</object>
+      <object>objects\obj_player</object>
+      <object>objects\obj_player1_spell_control_affliction</object>
+      <object>objects\obj_trap_rune_P1</object>
+    </objects>
+    <objects name="Player2Wizard">
+      <object>objects\obj_affliction_p2</object>
+      <object>objects\obj_big_fireball_p2</object>
+      <object>objects\obj_fireball_P2</object>
+      <object>objects\obj_immolation_P2</object>
+      <object>objects\obj_life_controller_P2</object>
+      <object>objects\obj_player2</object>
+      <object>objects\obj_player2_spell_control_affliction</object>
+      <object>objects\obj_trap_rune_active_P2</object>
+      <object>objects\obj_trap_rune_P2</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
