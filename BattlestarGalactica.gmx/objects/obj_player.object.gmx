@@ -154,12 +154,14 @@ case actionsP1.normal:
     positionCounter++;
 //Fireball
     if(castFireball &amp;&amp;!castAffliction){
-        instance_create(x,y,obj_fireball_P1);
+        fireball=instance_create(x,y,obj_fireball_P1);
+        fireball.direction=direction;
     }
     if(global.critP1==1){
         sprite_index = spr_player_crit;
         if(castBigFireball){
-            instance_create(x,y,obj_big_fireball_p1);
+            bigFireball=instance_create(x,y,obj_big_fireball_p1);
+            bigFireball.direction=direction;
             global.critP1=0;
         }
     }
@@ -213,6 +215,29 @@ case actionsP1.frozen:
     
     break;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_hitbox_crit2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.hpP1-=750;
 </string>
           </argument>
         </arguments>

@@ -47,6 +47,8 @@ inProcess=0;
 inProcess2=0;
 //spelltimeraffliction
 p1afflicted=0;
+//spellCrit
+critActive=0;
 </string>
           </argument>
         </arguments>
@@ -151,7 +153,14 @@ castAttack=gamepad_button_check_pressed(0,gp_shoulderrb);
 castChain = gamepad_button_check_pressed(0,gp_shoulderr);
 castSlam = gamepad_button_check_pressed(0,gp_face3);
 castDash = gamepad_button_check_pressed(0,gp_face1);
-
+castCrit = gamepad_button_check_pressed(0,gp_shoulderl);
+//CritChecker
+if(critActive==1){
+    sprite_index=spr_player_crit;
+}
+else if(critActive==0){
+    sprite_index=spr_knight;
+}
 //AfflictionChecker
 if(p1afflicted==1){
     global.hpknightP1-=1;
@@ -169,6 +178,10 @@ if(castAttack){
     hitbox =instance_create(x,y,obj_sword_hitbox);
     hitbox.direction=obj_aimer.direction;
     hitbox.image_angle=direction;
+    
+    if(random(30)&gt;=29){
+        critActive=1;
+    }
 }
 if(castChain &amp;&amp; inProcess==0){
     chain = instance_create(x,y,obj_chain_creator);
@@ -183,6 +196,17 @@ if(castSlam &amp;&amp; inProcess2==0){
     inProcess2=1;
     
 }
+if(critActive==1 &amp;&amp; castCrit){
+    sword = instance_create(x,y,obj_sword_crit);
+    sword.direction = direction;
+    sword.image_angle = direction;
+    
+    hitbox =instance_create(x,y,obj_sword_hitbox_crit);
+    hitbox.direction=obj_aimer.direction;
+    hitbox.image_angle=direction;
+    
+    critActive=0;
+}
 break;
 case actionsKnight.grapple:
     move_towards_point(obj_grapple_location.x,obj_grapple_location.y,10);
@@ -195,6 +219,29 @@ case actionsKnight.slam:
     move_towards_point(obj_slam_active_p1.x,obj_slam_active_p1.y,40);
 break;
 }//end switch
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_hitbox_crit2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.hpknightP1-=750;
 </string>
           </argument>
         </arguments>
