@@ -78,12 +78,18 @@ with(obj_player_knight2){
     sprite_index=spr_knight;
 }
 }
+if(global.p2trapperexists==1){
+with(obj_player_trapper2){
+    trapperState2=actionsTrapper2.normal;
+    sprite_index=spr_trapper;
+}
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player_knight2">
+    <event eventtype="4" ename="obj_player_trapper2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -100,8 +106,8 @@ with(obj_player_knight2){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_player_knight2){
-    Knightstate2=actionsKnight2.frozen;
+            <string>with(obj_player_trapper2){
+    trapperState2=actionsTrapper2.frozen;
 }
 </string>
           </argument>
@@ -127,6 +133,31 @@ with(obj_player_knight2){
             <kind>1</kind>
             <string>with(obj_player2){
     P2state = actionsP2.frozen;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_player_knight2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(obj_player_knight2){
+    Knightstate2=actionsKnight2.frozen;
 }
 </string>
           </argument>

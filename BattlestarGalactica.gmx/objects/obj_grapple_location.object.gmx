@@ -70,6 +70,13 @@ with(obj_player_knight2){
     sprite_index=spr_knight;
 }
 }
+
+if(global.p2trapperexists==1){
+with(obj_player_trapper2){
+    trapperState2=actionsTrapper2.normal;
+    sprite_index=spr_trapper;
+}
+}
 </string>
           </argument>
         </arguments>
@@ -126,6 +133,13 @@ if(global.p2knightexists==1){
 with(obj_player_knight2){
     Knightstate2=actionsKnight2.normal;
     sprite_index=spr_knight;
+}
+}
+
+if(global.p2trapperexists==1){
+with(obj_player_trapper2){
+    trapperState2=actionsTrapper2.normal;
+    sprite_index=spr_trapper;
 }
 }
 </string>
