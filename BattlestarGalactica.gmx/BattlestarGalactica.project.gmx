@@ -63,32 +63,15 @@
     <object>objects\obj_aimer2</object>
     <object>objects\obj_plasma_shield</object>
     <object>objects\obj_reverse</object>
-    <object>objects\obj_life_controller_P1knight</object>
-    <object>objects\obj_life_controller_P1trapper</object>
-    <object>objects\obj_life_controller_P2knight</object>
-    <object>objects\obj_life_controller_P2trapper</object>
     <object>objects\obj_sword</object>
     <object>objects\obj_sword_crit</object>
-    <object>objects\obj_player_knight</object>
-    <object>objects\obj_player_knight2</object>
-    <object>objects\obj_chain_creator</object>
-    <object>objects\obj_chain_creator2</object>
-    <object>objects\obj_grapple_location</object>
-    <object>objects\obj_grapple_location2</object>
     <object>objects\obj_chain</object>
-    <object>objects\obj_sword_hitbox</object>
-    <object>objects\obj_sword_hitbox_crit</object>
-    <object>objects\obj_sword_hitbox2</object>
-    <object>objects\obj_sword_hitbox_crit2</object>
     <object>objects\obj_treetrunk</object>
     <object>objects\obj_treeLeaves</object>
     <object>objects\obj_pond</object>
     <object>objects\obj_desert_wall</object>
     <object>objects\obj_snake</object>
     <object>objects\obj_snake_spawner</object>
-    <object>objects\obj_slam_p1</object>
-    <object>objects\obj_slam_p2</object>
-    <object>objects\obj_slam_active_p1</object>
     <object>objects\obj_slam_active_p2</object>
     <objects name="Player1Wizard">
       <object>objects\obj_affliction_p1</object>
@@ -112,21 +95,46 @@
       <object>objects\obj_trap_rune_active_P2</object>
       <object>objects\obj_trap_rune_P2</object>
     </objects>
-    <object>objects\obj_player_trapper</object>
-    <object>objects\obj_player_trapper2</object>
-    <object>objects\obj_bear_P2</object>
-    <object>objects\obj_bear_P1</object>
+    <objects name="Player1Knight">
+      <object>objects\obj_slam_p1</object>
+      <object>objects\obj_player_knight</object>
+      <object>objects\obj_life_controller_P1knight</object>
+      <object>objects\obj_chain_creator</object>
+      <object>objects\obj_grapple_location</object>
+      <object>objects\obj_sword_hitbox_crit</object>
+      <object>objects\obj_sword_hitbox</object>
+      <object>objects\obj_slam_active_p1</object>
+    </objects>
+    <objects name="Player2Knight">
+      <object>objects\obj_sword_hitbox_crit2</object>
+      <object>objects\obj_slam_p2</object>
+      <object>objects\obj_grapple_location2</object>
+      <object>objects\obj_life_controller_P2knight</object>
+      <object>objects\obj_chain_creator2</object>
+      <object>objects\obj_sword_hitbox2</object>
+      <object>objects\obj_player_knight2</object>
+    </objects>
+    <objects name="Player1Trapper">
+      <object>objects\obj_player_trapper</object>
+      <object>objects\obj_shotgun_hitbox</object>
+      <object>objects\obj_bear_P1</object>
+      <object>objects\obj_life_controller_P1trapper</object>
+      <object>objects\obj_freezeTrap_active</object>
+      <object>objects\obj_poisonTrap</object>
+      <object>objects\obj_poisonTrap_active</object>
+      <object>objects\obj_freezeTrap</object>
+    </objects>
+    <objects name="Player2Trapper">
+      <object>objects\obj_player_trapper2</object>
+      <object>objects\obj_bear_P2</object>
+      <object>objects\obj_freezeTrap_active2</object>
+      <object>objects\obj_life_controller_P2trapper</object>
+      <object>objects\obj_freezeTrap2</object>
+      <object>objects\obj_poisonTrap2</object>
+      <object>objects\obj_poisonTrap_active2</object>
+      <object>objects\obj_shotgun_hitbox2</object>
+    </objects>
     <object>objects\obj_shotgunblast</object>
-    <object>objects\obj_shotgun_hitbox</object>
-    <object>objects\obj_shotgun_hitbox2</object>
-    <object>objects\obj_freezeTrap</object>
-    <object>objects\obj_freezeTrap_active</object>
-    <object>objects\obj_freezeTrap_active2</object>
-    <object>objects\obj_freezeTrap2</object>
-    <object>objects\obj_poisonTrap</object>
-    <object>objects\obj_poisonTrap_active2</object>
-    <object>objects\obj_poisonTrap_active</object>
-    <object>objects\obj_poisonTrap2</object>
     <object>objects\obj_title</object>
     <object>objects\obj_character_select</object>
     <object>objects\obj_stage_select</object>
