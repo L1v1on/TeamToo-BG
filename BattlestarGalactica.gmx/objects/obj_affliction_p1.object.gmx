@@ -108,7 +108,7 @@ if(bendfactor%9==0){
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player2">
+    <event eventtype="4" ename="obj_player_knight2">
       <action>
         <libid>1</libid>
         <id>203</id>
@@ -124,7 +124,7 @@ if(bendfactor%9==0){
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player_knight2">
+    <event eventtype="4" ename="obj_player2">
       <action>
         <libid>1</libid>
         <id>203</id>
