@@ -120,6 +120,10 @@
     <object>objects\obj_poisonTrap_active2</object>
     <object>objects\obj_poisonTrap_active</object>
     <object>objects\obj_poisonTrap2</object>
+    <object>objects\obj_title</object>
+    <object>objects\obj_character_select</object>
+    <object>objects\obj_stage_select</object>
+    <object>objects\obj_round_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
@@ -127,6 +131,7 @@
     <room>rooms\rm_game</room>
     <room>rooms\rm_forest</room>
     <room>rooms\rm_desert</room>
+    <room>rooms\rm_round_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
