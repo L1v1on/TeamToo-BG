@@ -89,6 +89,10 @@
     <object>objects\obj_slam_p2</object>
     <object>objects\obj_slam_active_p1</object>
     <object>objects\obj_slam_active_p2</object>
+    <object>objects\obj_title</object>
+    <object>objects\obj_character_select</object>
+    <object>objects\obj_stage_select</object>
+    <object>objects\obj_round_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>
