@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_music_test</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
     <sprite>sprites\spr_trapper</sprite>
@@ -38,6 +40,7 @@
     <sprite>sprites\spr_shotgunBlast</sprite>
     <sprite>sprites\spr_shotgun_hitbox</sprite>
     <sprite>sprites\spr_bear</sprite>
+    <sprite>sprites\spr_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -51,6 +54,10 @@
     <script>scripts\scr_cast_affliction2.gml</script>
     <script>scripts\scr_controller_input.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\ft_ui</font>
+    <font>fonts\ft_help</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_aimer</object>
     <object>objects\obj_aimer2</object>
@@ -126,6 +133,7 @@
     <object>objects\obj_round_controller</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
     <room>rooms\rm_prep</room>
     <room>rooms\rm_sam_room_dont_touch</room>
     <room>rooms\rm_game</room>
