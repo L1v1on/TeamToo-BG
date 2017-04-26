@@ -32,6 +32,8 @@ global.p2knightexists=1;
 global.hpknightP2=10000;
 global.maxhpknightP2=10000;
 
+instance_create(x,y,obj_life_controller_P2knight);
+
 enum actionsKnight2{
     normal,
     frozen,
@@ -50,6 +52,57 @@ p2afflicted=0;
 //spellCrit
 critActive=0;
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>p2afflicted=0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>541</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_knight</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -154,6 +207,11 @@ castChain = gamepad_button_check_pressed(1,gp_shoulderr);
 castSlam = gamepad_button_check_pressed(1,gp_face3);
 castDash = gamepad_button_check_pressed(1,gp_face1);
 castCrit = gamepad_button_check_pressed(1,gp_shoulderl);
+//ShotgunChecker
+if(place_meeting(x,y,obj_shotgun_hitbox)){
+    global.hpknightP2-=100;
+    motion_add(obj_player_trapper.direction,27);
+}
 //CritChecker
 if(critActive==1){
     sprite_index=spr_player_crit;
@@ -224,7 +282,35 @@ break;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sword_hitbox_crit">
+    <event eventtype="4" ename="obj_poisonTrap">
+      <action>
+        <libid>1</libid>
+        <id>541</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_set</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_player_afflicted</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -241,13 +327,37 @@ break;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.hpknightP2-=750;
+            <string>p2afflicted = 1;
 </string>
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>301</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_alarm</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>180</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
-    <event eventtype="4" ename="obj_slam_active_p2">
+    <event eventtype="4" ename="obj_bear_P1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -264,15 +374,13 @@ break;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//no longer frozen
-Knightstate2=actionsKnight2.normal;
-
+            <string>global.hpknightP2-=10;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_sword_hitbox">
+    <event eventtype="4" ename="obj_fireball_P1">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -293,6 +401,20 @@ Knightstate2=actionsKnight2.normal;
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>other</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="4" ename="obj_big_fireball_p1">
@@ -407,7 +529,55 @@ Knightstate2=actionsKnight2.normal;
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_fireball_P1">
+    <event eventtype="4" ename="obj_slam_active_p2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//no longer frozen
+Knightstate2=actionsKnight2.normal;
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_hitbox_crit">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.hpknightP2-=750;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_sword_hitbox">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -428,20 +598,6 @@ Knightstate2=actionsKnight2.normal;
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>other</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
     </event>
   </events>

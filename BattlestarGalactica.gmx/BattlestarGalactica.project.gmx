@@ -7,6 +7,7 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_trapper</sprite>
     <sprite>sprites\spr_aimer</sprite>
     <sprite>sprites\spr_fireball</sprite>
     <sprite>sprites\spr_bigfireball</sprite>
@@ -32,6 +33,11 @@
     <sprite>sprites\spr_slam</sprite>
     <sprite>sprites\spr_slam_active</sprite>
     <sprite>sprites\spr_slam_aimer</sprite>
+    <sprite>sprites\spr_freezeTrap</sprite>
+    <sprite>sprites\spr_poisonTrap</sprite>
+    <sprite>sprites\spr_shotgunBlast</sprite>
+    <sprite>sprites\spr_shotgun_hitbox</sprite>
+    <sprite>sprites\spr_bear</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -51,7 +57,9 @@
     <object>objects\obj_plasma_shield</object>
     <object>objects\obj_reverse</object>
     <object>objects\obj_life_controller_P1knight</object>
+    <object>objects\obj_life_controller_P1trapper</object>
     <object>objects\obj_life_controller_P2knight</object>
+    <object>objects\obj_life_controller_P2trapper</object>
     <object>objects\obj_sword</object>
     <object>objects\obj_sword_crit</object>
     <object>objects\obj_player_knight</object>
@@ -75,10 +83,10 @@
     <object>objects\obj_slam_p2</object>
     <object>objects\obj_slam_active_p1</object>
     <object>objects\obj_slam_active_p2</object>
-    <object>objects\obj_trap_rune_active_P1</object>
     <objects name="Player1Wizard">
       <object>objects\obj_affliction_p1</object>
       <object>objects\obj_big_fireball_p1</object>
+      <object>objects\obj_trap_rune_active_P1</object>
       <object>objects\obj_fireball_P1</object>
       <object>objects\obj_immolation_P1</object>
       <object>objects\obj_life_controller_P1</object>
@@ -97,6 +105,21 @@
       <object>objects\obj_trap_rune_active_P2</object>
       <object>objects\obj_trap_rune_P2</object>
     </objects>
+    <object>objects\obj_player_trapper</object>
+    <object>objects\obj_player_trapper2</object>
+    <object>objects\obj_bear_P2</object>
+    <object>objects\obj_bear_P1</object>
+    <object>objects\obj_shotgunblast</object>
+    <object>objects\obj_shotgun_hitbox</object>
+    <object>objects\obj_shotgun_hitbox2</object>
+    <object>objects\obj_freezeTrap</object>
+    <object>objects\obj_freezeTrap_active</object>
+    <object>objects\obj_freezeTrap_active2</object>
+    <object>objects\obj_freezeTrap2</object>
+    <object>objects\obj_poisonTrap</object>
+    <object>objects\obj_poisonTrap_active2</object>
+    <object>objects\obj_poisonTrap_active</object>
+    <object>objects\obj_poisonTrap2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_prep</room>

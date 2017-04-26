@@ -80,12 +80,19 @@ with(obj_player_knight){
     sprite_index=spr_knight;
     }
 }
+if(global.p1trapperexists==1){
+with(obj_player_trapper){
+    trapperState=actionsTrapper.normal;
+    sprite_index=spr_trapper;
+}
+}
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_player_knight">
+    <event eventtype="4" ename="obj_player_trapper">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -96,15 +103,13 @@ with(obj_player_knight){
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_player_knight){
-    Knightstate=actionsKnight.frozen;
-}
+            <string>trapperState=actionsTrapper.frozen;
 </string>
           </argument>
         </arguments>
@@ -130,6 +135,31 @@ with(obj_player_knight){
             <string>///Code State Machine
 with(obj_player){
     P1state = actionsP1.frozen;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_player_knight">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>with(obj_player_knight){
+    Knightstate=actionsKnight.frozen;
 }
 </string>
           </argument>
