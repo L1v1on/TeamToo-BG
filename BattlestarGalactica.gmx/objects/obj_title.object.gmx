@@ -271,8 +271,9 @@
            }
            if (gamepad_button_check_released(i, gp_face1))
            {
+                instance_create(x, y, obj_character_select);
                 direction = 270;
-                gravity = 1.5;
+                gravity = 1.8;
            }
         }
     }
