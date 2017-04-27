@@ -247,7 +247,25 @@
  for (var i = 0; i &lt; gp_num; i++;)
     {
     if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;
+    if (global.gp[i] = true)
+        {
+           if (gamepad_button_check_pressed(i, gp_padu))
+           {
+                if (selection &gt; 1)
+                {
+                    selection--
+                } 
+           }
+           if (gamepad_button_check_pressed(i, gp_padd))
+           {
+                if (selection &lt; 2)
+                {
+                    selection++
+                }
+           }
+        }
     }
+
 </string>
           </argument>
         </arguments>
@@ -606,7 +624,7 @@
         <arguments>
           <argument>
             <kind>2</kind>
-            <string>Left stick Up/Down to pick option - A to confirm</string>
+            <string>D-pad Up/Down to pick option - A to confirm</string>
           </argument>
           <argument>
             <kind>0</kind>
