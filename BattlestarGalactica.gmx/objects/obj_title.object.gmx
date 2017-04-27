@@ -269,6 +269,11 @@
            {
                 audio_play_sound(snd_select, 1, false);
            }
+           if (gamepad_button_check_released(i, gp_face1))
+           {
+                direction = 270;
+                gravity = 1.5;
+           }
         }
     }
 
