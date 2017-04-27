@@ -129,6 +129,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>gp_num</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>gamepad_get_device_count()</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -200,6 +224,31 @@
           <argument>
             <kind>0</kind>
             <string>5*cos(change*2)</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//check for gamepads connected
+ for (var i = 0; i &lt; gp_num; i++;)
+    {
+    if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;
+    }
+</string>
           </argument>
         </arguments>
       </action>
@@ -566,6 +615,36 @@
           <argument>
             <kind>0</kind>
             <string>428</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Write text if gamepad is connected
+for (var i = 0; i &lt; gp_num; i++;)
+    {
+        if (global.gp[i] = true)
+        {
+            draw_set_colour(c_white);
+            draw_set_font(ft_help);
+            draw_text(obj_title.x + 268, obj_title.y + 428 + i*32, "pad " + string(i) + " connected");
+        }
+    }
+</string>
           </argument>
         </arguments>
       </action>
