@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\snd_music_test</sound>
+    <sound>sound\snd_select</sound>
+    <sound>sound\snd_select_move</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>

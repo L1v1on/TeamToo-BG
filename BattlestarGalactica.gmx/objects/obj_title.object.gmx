@@ -254,6 +254,7 @@
                 if (selection &gt; 1)
                 {
                     selection--
+                    audio_play_sound(snd_select_move, 0, false);
                 } 
            }
            if (gamepad_button_check_pressed(i, gp_padd))
@@ -261,7 +262,12 @@
                 if (selection &lt; 2)
                 {
                     selection++
+                    audio_play_sound(snd_select_move, 0, false);
                 }
+           }
+           if (gamepad_button_check_pressed(i, gp_face1))
+           {
+                audio_play_sound(snd_select, 1, false);
            }
         }
     }
