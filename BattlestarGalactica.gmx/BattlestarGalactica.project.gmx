@@ -31,6 +31,8 @@
     <sprite>sprites\spr_treetrunk</sprite>
     <sprite>sprites\spr_snake</sprite>
     <sprite>sprites\spr_desert_wall</sprite>
+    <sprite>sprites\spr_dungeon_wall</sprite>
+    <sprite>sprites\spr_hole</sprite>
     <sprite>sprites\spr_treeleaves</sprite>
     <sprite>sprites\spr_pond</sprite>
     <sprite>sprites\spr_chain</sprite>
@@ -48,6 +50,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
+    <background>background\bg_dungeon</background>
     <background>background\bg_sand</background>
   </backgrounds>
   <paths name="paths"/>
@@ -74,6 +77,8 @@
     <object>objects\obj_treeLeaves</object>
     <object>objects\obj_pond</object>
     <object>objects\obj_desert_wall</object>
+    <object>objects\obj_dungeon_wall</object>
+    <object>objects\obj_hole</object>
     <object>objects\obj_snake</object>
     <object>objects\obj_snake_spawner</object>
     <object>objects\obj_slam_active_p2</object>
@@ -148,10 +153,11 @@
     <room>rooms\rm_title</room>
     <room>rooms\rm_prep</room>
     <room>rooms\rm_sam_room_dont_touch</room>
-    <room>rooms\rm_game</room>
     <room>rooms\rm_forest</room>
     <room>rooms\rm_desert</room>
+    <room>rooms\rm_dungeon</room>
     <room>rooms\rm_round_test</room>
+    <room>rooms\rm_game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
