@@ -161,8 +161,8 @@
     <room>rooms\rm_forest</room>
     <room>rooms\rm_desert</room>
     <room>rooms\rm_dungeon</room>
-    <room>rooms\rm_round_test</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_round_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
