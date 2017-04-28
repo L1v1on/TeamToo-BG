@@ -153,10 +153,12 @@
     <object>objects\obj_character_select</object>
     <object>objects\obj_stage_select</object>
     <object>objects\obj_round_controller</object>
+    <object>objects\obj_p1_char</object>
+    <object>objects\obj_p2_char</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_game</room>
     <room>rooms\rm_title</room>
+    <room>rooms\rm_game</room>
     <room>rooms\rm_prep</room>
     <room>rooms\rm_sam_room_dont_touch</room>
     <room>rooms\rm_forest</room>
