@@ -53,6 +53,9 @@
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_checkmark</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_new_wizard</sprite>
+    <sprite>sprites\spr_new_trapper</sprite>
+    <sprite>sprites\spr_new_knight</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -154,8 +157,6 @@
     <object>objects\obj_character_select</object>
     <object>objects\obj_stage_select</object>
     <object>objects\obj_round_controller</object>
-    <object>objects\obj_p1_char</object>
-    <object>objects\obj_p2_char</object>
     <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
