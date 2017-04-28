@@ -80,6 +80,10 @@ with(obj_player_trapper){
     sprite_index=spr_trapper;
 }
 }
+
+with(obj_player_trapper2){
+    freezeProcess=0;
+}
 </string>
           </argument>
         </arguments>
