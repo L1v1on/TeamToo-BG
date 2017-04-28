@@ -33,7 +33,7 @@ speed = point_distance(0 ,0, hraxis, vraxis) * 30;
 image_angle--;
 
 castSlam = gamepad_button_check_pressed(1,gp_face3);
-if(castSlam){
+if(castSlam &amp;&amp; collision_line(x,y,obj_player_knight2.x,obj_player_knight2.y,obj_wall,false,true) = noone){
     instance_create(x,y,obj_slam_active_p2);
     instance_destroy();
     with(obj_player_knight2){

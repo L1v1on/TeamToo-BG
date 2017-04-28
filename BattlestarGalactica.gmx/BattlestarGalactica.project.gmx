@@ -52,6 +52,7 @@
     <sprite>sprites\spr_title</sprite>
     <sprite>sprites\spr_arrow</sprite>
     <sprite>sprites\spr_checkmark</sprite>
+    <sprite>sprites\spr_wall</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_game</background>
@@ -153,12 +154,13 @@
     <object>objects\obj_character_select</object>
     <object>objects\obj_stage_select</object>
     <object>objects\obj_round_controller</object>
+    <object>objects\obj_wall</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_game</room>
-    <room>rooms\rm_title</room>
     <room>rooms\rm_prep</room>
     <room>rooms\rm_sam_room_dont_touch</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_title</room>
     <room>rooms\rm_forest</room>
     <room>rooms\rm_for_test</room>
     <room>rooms\rm_desert</room>
