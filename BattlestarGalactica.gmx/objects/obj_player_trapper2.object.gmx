@@ -245,6 +245,11 @@ trapperState2=actionsTrapper2.normal;
             sprite_index = spr_player_afflicted;
             global.hptrapperP2-=2;
         }
+        //Shotgun Reaction
+        if(place_meeting(x,y,obj_shotgun_hitbox)){
+            global.hptrapperP2-=100;
+            motion_add(obj_player_trapper.direction,27);
+        }
     break;
 
 }

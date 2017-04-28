@@ -266,6 +266,11 @@ case actionsP2.frozen:
     if(p2afflicted==1){
     sprite_index = spr_player_afflicted;
     global.hpP2-=1;
+    }
+    if(place_meeting(x,y,obj_shotgun_hitbox)){
+    global.hpP2-=100;
+    motion_add(obj_player_trapper.direction,27);
+
     
 }
 speed=0;

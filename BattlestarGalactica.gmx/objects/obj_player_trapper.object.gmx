@@ -273,6 +273,10 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
             sprite_index = spr_player_afflicted;
             global.hptrapperP1-=2;
         }
+        if(place_meeting(x,y,obj_shotgun_hitbox2)){
+    global.hptrapperP1-=100;
+    motion_add(obj_player_trapper2.direction,27);
+}
     break;
 
 }

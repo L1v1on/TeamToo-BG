@@ -269,6 +269,10 @@ case actionsP1.frozen:
         global.hpP1-=1;
         sprite_index = spr_player_afflicted;
     }
+    if(place_meeting(x,y,obj_shotgun_hitbox2)){
+    global.hpP1-=100;
+    motion_add(obj_player_trapper2.direction,27);
+}
     speed = 0;  
     
     break;
