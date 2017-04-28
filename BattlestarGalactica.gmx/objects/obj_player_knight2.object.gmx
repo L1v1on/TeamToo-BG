@@ -271,6 +271,14 @@ case actionsKnight2.grapple:
 break;
 case actionsKnight2.frozen:
     sprite_index=spr_player_trapped;
+    if(place_meeting(x,y,obj_shotgun_hitbox)){
+    global.hpknightP2-=100;
+    motion_add(obj_player_trapper.direction,27);
+}
+if(p2afflicted==1){
+    global.hpknightP2-=1;
+    sprite_index = spr_player_afflicted;
+}
     speed=0;
 break;
 case actionsKnight2.slam:

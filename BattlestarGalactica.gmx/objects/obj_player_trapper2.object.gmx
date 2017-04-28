@@ -36,7 +36,8 @@ bear.image_angle=180;
 bear.image_speed=6;
 
 bearCooldown=0;
-
+//FreezeCheck
+freezeProcess=0;
 //AfflictionCheck
 afflicted=0;
 
@@ -190,8 +191,9 @@ trapperState2=actionsTrapper2.normal;
             instance_create(x,y,obj_poisonTrap2);
         }
         //Freeze Code
-        if(castFreeze){
+        if(castFreeze &amp;&amp; freezeProcess==0){
             instance_create(x,y,obj_freezeTrap2);
+            freezeProcess=1;
         }
         //Hustle Code
         if(castHustle){
@@ -242,6 +244,11 @@ trapperState2=actionsTrapper2.normal;
         if(afflicted==1){
             sprite_index = spr_player_afflicted;
             global.hptrapperP2-=2;
+        }
+        //Shotgun Reaction
+        if(place_meeting(x,y,obj_shotgun_hitbox)){
+            global.hptrapperP2-=100;
+            motion_add(obj_player_trapper.direction,27);
         }
     break;
 

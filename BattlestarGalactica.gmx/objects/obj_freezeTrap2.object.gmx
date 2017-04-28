@@ -52,6 +52,9 @@
 
 if(freezeDestroy){
     instance_destroy();
+    with(obj_player_trapper2){
+        freezeProcess=0;
+    }
 }
 </string>
           </argument>

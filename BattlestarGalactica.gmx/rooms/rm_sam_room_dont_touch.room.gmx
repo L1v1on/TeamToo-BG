@@ -53,8 +53,8 @@
   <instances>
     <instance objName="obj_treetrunk" x="128" y="384" name="inst_A8FE2500" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_treeLeaves" x="64" y="320" name="inst_7AB9F850" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_trapper" x="96" y="192" name="inst_2A7C3FB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player2" x="512" y="288" name="inst_7EBFE934" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="64" y="64" name="inst_84BDC74E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player_knight2" x="512" y="160" name="inst_81E3F826" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
