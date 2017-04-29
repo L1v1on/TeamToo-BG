@@ -231,6 +231,7 @@ if(castDash){
         speed = 40;
 }
 if(castAttack){
+    audio_play_sound(snd_sword_swing, 0, false);
     sword = instance_create(x,y,obj_sword);
     sword.direction = direction;
     sword.image_angle = direction;
@@ -257,6 +258,7 @@ if(castSlam &amp;&amp; inProcess2==0){
     
 }
 if(critActive==1 &amp;&amp; castCrit){
+    audio_play_sound(snd_sword_swing, 0, false);
     sword = instance_create(x,y,obj_sword_crit);
     sword.direction = direction;
     sword.image_angle = direction;
@@ -280,6 +282,7 @@ case actionsKnight.frozen:
     sprite_index = spr_player_afflicted;
 }
     if(place_meeting(x,y,obj_shotgun_hitbox2)){
+    audio_play_sound(snd_player_hit, 0, false);
     global.hpknightP1-=100;
     motion_add(obj_player_trapper2.direction,27);
 }
@@ -340,6 +343,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -387,6 +391,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>global.hpknightP1-=10;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -410,6 +415,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>global.hpknightP1-=100;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -433,6 +439,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>global.hpknightP1-=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -481,6 +488,7 @@ Knightstate=actionsKnight.normal;
           <argument>
             <kind>1</kind>
             <string>global.hpknightP1-=100;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -532,6 +540,7 @@ Knightstate=actionsKnight.normal;
           <argument>
             <kind>1</kind>
             <string>global.hpknightP1-=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -583,6 +592,7 @@ Knightstate=actionsKnight.normal;
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -682,6 +692,7 @@ Knightstate=actionsKnight.normal;
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>

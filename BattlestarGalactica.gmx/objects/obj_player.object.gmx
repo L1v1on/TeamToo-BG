@@ -212,12 +212,14 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
     positionCounter++;
 //Fireball
     if(castFireball &amp;&amp;!castAffliction){
+        audio_play_sound(snd_fireball, 0, false);
         fireball=instance_create(x,y,obj_fireball_P1);
         fireball.direction=direction;
     }
     if(global.critP1==1){
         sprite_index = spr_player_crit;
         if(castBigFireball){
+            audio_play_sound(snd_fireball, 0, false);
             bigFireball=instance_create(x,y,obj_big_fireball_p1);
             bigFireball.direction=direction;
             global.critP1=0;
@@ -352,6 +354,7 @@ case actionsP1.frozen:
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -375,6 +378,7 @@ case actionsP1.frozen:
           <argument>
             <kind>1</kind>
             <string>global.hpP1-=10;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -398,6 +402,7 @@ case actionsP1.frozen:
           <argument>
             <kind>1</kind>
             <string>global.hpP1-=100;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -421,6 +426,7 @@ case actionsP1.frozen:
           <argument>
             <kind>1</kind>
             <string>global.hpP1-=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -444,6 +450,7 @@ case actionsP1.frozen:
           <argument>
             <kind>1</kind>
             <string>global.hpP1-=100;
+audio_play_sound(snd_player_hit, 0, false);
 global.castTimeAfflictionP1=1;
 castTimeAffliction=0;
 if(createonce==1){
@@ -504,6 +511,7 @@ createonce=0;
           <argument>
             <kind>1</kind>
             <string>global.hpP1 -=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -579,6 +587,7 @@ createonce=0;
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -654,6 +663,7 @@ createonce=0;
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>

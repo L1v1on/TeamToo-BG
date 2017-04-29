@@ -230,6 +230,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
         //Attack Code
         if(castAttack){
             shotgun=instance_create(x,y,obj_shotgunblast);
+            audio_play_sound(snd_shotgun, 0, false);
             shotgun.image_speed=2;
             shotgun.image_angle=direction;
             
@@ -331,6 +332,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -378,6 +380,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>global.hptrapperP1-=10;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -401,6 +404,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>global.hptrapperP1-=100;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -424,6 +428,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>global.hptrapperP1-=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -447,6 +452,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>global.hptrapperP1-=100;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -484,6 +490,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>global.hptrapperP1-=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -549,6 +556,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -648,6 +656,7 @@ if(place_meeting(x,y,obj_shotgun_hitbox2)){
           <argument>
             <kind>1</kind>
             <string>p1afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
