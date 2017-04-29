@@ -94,10 +94,13 @@ alarm[0]=1;
 with(obj_player_trapper2){
     trapperState2 = actionsTrapper2.frozen;
 }
-with(obj_player_knight){
-    Knightstate = actionsKnight.grapple;
-}
+
 instance_create(x,y,obj_grapple_location);
+with(obj_player_knight){
+if(collision_line(x,y,obj_grapple_location.x,obj_grapple_location.y,obj_wall,false,true) = noone){
+    Knightstate = actionsKnight.grapple;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -138,10 +141,13 @@ instance_create(x,y,obj_grapple_location);
 with(obj_player_knight2){
     Knightstate2 = actionsKnight2.frozen;
 }
-with(obj_player_knight){
-    Knightstate = actionsKnight.grapple;
-}
+
 instance_create(x,y,obj_grapple_location);
+with(obj_player_knight){
+if(collision_line(x,y,obj_grapple_location.x,obj_grapple_location.y,obj_wall,false,true) = noone){
+    Knightstate = actionsKnight.grapple;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -182,10 +188,13 @@ instance_create(x,y,obj_grapple_location);
 with(obj_player2){
     P2state = actionsP2.frozen;
 }
-with(obj_player_knight){
-    Knightstate = actionsKnight.grapple;
-}
+
 instance_create(x,y,obj_grapple_location);
+with(obj_player_knight){
+if(collision_line(x,y,obj_grapple_location.x,obj_grapple_location.y,obj_wall,false,true) = noone){
+    Knightstate = actionsKnight.grapple;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -226,10 +235,13 @@ instance_create(x,y,obj_grapple_location);
 with(obj_player){
     P1state = actionsP1.frozen;
 }
-with(obj_player_knight){
-    Knightstate = actionsKnight.grapple;
-}
+
 instance_create(x,y,obj_grapple_location);
+with(obj_player_knight){
+if(collision_line(x,y,obj_grapple_location.x,obj_grapple_location.y,obj_wall,false,true) = noone){
+    Knightstate = actionsKnight.grapple;
+    }
+}
 </string>
           </argument>
         </arguments>

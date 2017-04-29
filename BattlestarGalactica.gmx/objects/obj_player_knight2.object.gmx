@@ -267,7 +267,9 @@ if(critActive==1 &amp;&amp; castCrit){
 }
 break;
 case actionsKnight2.grapple:
+
     move_towards_point(obj_grapple_location2.x,obj_grapple_location2.y,10);
+    
 break;
 case actionsKnight2.frozen:
     sprite_index=spr_player_trapped;
