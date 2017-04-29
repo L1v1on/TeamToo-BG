@@ -13,6 +13,7 @@
     <sound>sound\snd_shotgun</sound>
     <sound>sound\snd_player_hit</sound>
     <sound>sound\snd_bear</sound>
+    <sound>sound\snd_bear_new</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>
