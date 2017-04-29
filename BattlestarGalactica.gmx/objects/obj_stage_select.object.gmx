@@ -244,6 +244,18 @@ if (p2_character = 3)
         room_instance_add(rm_dun_test, 864, 96, obj_player_knight2);
 }
 
+if (stage_selected = 1)
+    {
+        room_instance_add(rm_for_test, 0, 0, obj_round_controller);
+    }
+if (stage_selected = 2)
+    {
+        room_instance_add(rm_des_test, 0, 0, obj_round_controller);
+    }
+if (stage_selected = 3)
+    {
+        room_instance_add(rm_dun_test, 0, 0, obj_round_controller);
+    }
 </string>
           </argument>
         </arguments>
