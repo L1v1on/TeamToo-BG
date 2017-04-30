@@ -199,6 +199,7 @@ castTrapRune = gamepad_button_check_pressed(1,gp_face3);
 castImmolation = gamepad_button_check_pressed(1,gp_face4);
 //Shotgun Reaction
 if(place_meeting(x,y,obj_shotgun_hitbox)){
+    audio_play_sound(snd_player_hit, 0, false);
     global.hpP2-=100;
     motion_add(obj_player_trapper.direction,27);
 }
@@ -210,6 +211,7 @@ if(positionCounter%120 == 0){
 positionCounter++;
 //CastFireball
 if(castFireball &amp;&amp; !castAffliction){
+    audio_play_sound(snd_fireball, 0, false);
     fireball=instance_create(x,y,obj_fireball_P2);
     fireball.direction=direction;
     
@@ -217,6 +219,7 @@ if(castFireball &amp;&amp; !castAffliction){
 if(global.critP2==1){
     sprite_index = spr_player_crit;
     if(castBigFireball){
+        audio_play_sound(snd_fireball, 0, false);
         bigFireball=instance_create(x,y,obj_big_fireball_p2);
         bigFireball.direction=direction;
         global.critP2=0;
@@ -351,6 +354,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>p2afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -374,6 +378,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>global.hpP2-=10;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -397,6 +402,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>global.hpP2-=100;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -420,6 +426,7 @@ break;
           <argument>
             <kind>1</kind>
             <string>global.hpP2-=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -452,6 +459,8 @@ with(spell){
 }
 }
 createonce=0;
+
+audio_play_sound(snd_player_hit, 0, false);
 
 </string>
           </argument>
@@ -504,6 +513,7 @@ createonce=0;
           <argument>
             <kind>1</kind>
             <string>global.hpP2 -=750;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -579,6 +589,7 @@ createonce=0;
           <argument>
             <kind>1</kind>
             <string>p2afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
@@ -654,6 +665,7 @@ createonce=0;
           <argument>
             <kind>1</kind>
             <string>p2afflicted = 1;
+audio_play_sound(snd_player_hit, 0, false);
 </string>
           </argument>
         </arguments>
