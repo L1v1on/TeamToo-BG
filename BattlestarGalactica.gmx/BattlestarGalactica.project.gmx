@@ -13,13 +13,10 @@
     <sound>sound\snd_shotgun</sound>
     <sound>sound\snd_player_hit</sound>
     <sound>sound\snd_bear</sound>
-
     <sound>sound\snd_bear_new</sound>
-
     <sound>sound\snd_for</sound>
     <sound>sound\snd_des</sound>
     <sound>sound\snd_dun</sound>
-
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_player</sprite>

@@ -205,6 +205,71 @@
     <event eventtype="2" enumb="1">
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+    with(obj_player){
+        instance_destroy();
+        
+    }
+    
+
+    with(obj_player2){
+        instance_destroy();
+    }
+    
+
+    with(obj_player_knight){
+        instance_destroy();
+    }
+    
+
+    with(obj_player_knight2){
+        instance_destroy();
+    }
+    
+
+    with(obj_player_trapper){
+        instance_destroy();
+    }
+    
+
+    with(obj_player_trapper2){
+        instance_destroy();
+    }
+    
+    with(obj_character_select){
+        instance_destroy();
+    }
+    with(obj_stage_select){
+        instance_destroy();
+    }
+    
+    
+
+instance_destroy();
+
+
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>331</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -1516,7 +1581,7 @@ if (global.p2knightexists = 1)
         <arguments>
           <argument>
             <kind>2</kind>
-            <string>Player 2 Wins Match!</string>
+            <string>Player 1 Wins Match!</string>
           </argument>
           <argument>
             <kind>0</kind>

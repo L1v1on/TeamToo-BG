@@ -10,7 +10,37 @@
   <persistent>0</persistent>
   <colour>16384</colour>
   <showcolour>-1</showcolour>
-  <code>global.p1exists=0;
+  <code>if(instance_exists(obj_player)){
+    with(obj_player){
+        instance_destroy();
+    }
+}
+if(instance_exists(obj_player2)){
+    with(obj_player2){
+        instance_destroy();
+    }
+}
+if(instance_exists(obj_player_knight)){
+    with(obj_player_knight){
+        instance_destroy();
+    }
+}
+if(instance_exists(obj_player_knight2)){
+    with(obj_player_knight2){
+        instance_destroy();
+    }
+}
+if(instance_exists(obj_player_trapper)){
+    with(obj_player_trapper){
+        instance_destroy();
+    }
+}
+if(instance_exists(obj_player_trapper2)){
+    with(obj_player_trapper2){
+        instance_destroy();
+    }
+}
+global.p1exists=0;
 global.p2exists=0;
 global.p1knightexists=0;
 global.p2knightexists=0;
